@@ -15,7 +15,7 @@
         %ul.nav.navbar-nav
           - if user_signed_in?
             - if current_user.manager
-              %li= link_to("List of employees".upcase!, new_user_session_path)
+              %li= link_to("List of employees".upcase!, list_employees_path)
             - else
               %li= link_to("My reports".upcase!, user_reports_path)
       %ul.nav.navbar-nav.navbar-right

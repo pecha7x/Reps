@@ -14,6 +14,14 @@ class ManagerController < ApplicationController
     }
   end
 
+  def list_employees
+    @users = User.nin(current_user.id).order_by(created_at: :desc)
+
+    respond_to do |format|
+      format.html { render "manager/employees" }
+    end
+  end
+
   private
   def report_params
     params.permit!

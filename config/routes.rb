@@ -5,5 +5,7 @@ Reps::Application.routes.draw do
   match '/save_report.json', :to => 'employee#save_report', :via => [:post]
   get "/myreports", :to => "employee#user_reports", :as => "user_reports"
   get "/myreport/:id", :to => "employee#user_report", :as => "user_report"
+
   match '/get_report.json', :to => 'manager#get_report', :via => [:post]
+  get "/employees", :to => "manager#list_employees", :as => "list_employees"
 end
