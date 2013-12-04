@@ -1,0 +1,23 @@
+!!!
+%html{lang: "en"}
+  %head
+    %title WeeklyReps
+    %meta{charset: "utf-8"}/
+    = csrf_meta_tags
+    = stylesheet_link_tag "application", media: "all"
+    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Oswald|Open+Sans:400,600,700", media: "all"
+    = javascript_include_tag "application"
+  %body
+    %header.navbar.navbar-default.navbar-fixed-top{role: "banner"}
+      .navbar-header
+        = link_to "The Weekly Reps", root_path, :class=>"navbar-brand"
+      .collapse.navbar-collapse.navbar-ex1-collapse
+        %ul.nav.navbar-nav
+      %ul.nav.navbar-nav.navbar-right
+        #button_sign
+          - if user_signed_in?
+            = link_to 'Sign out', destroy_user_session_path, :method => :delete, :class=>"btn btn-li btn-danger"
+          - else
+            = link_to 'Sign in', new_user_session_path, :class=>"btn btn-li btn-success"
+    .container
+      = yield
