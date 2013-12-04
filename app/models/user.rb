@@ -16,6 +16,7 @@ class User
   field :nickname, type: String, default: ""
   field :time_zone, type: String, default: "UTC"
   field :notification_time,  type: Time, default: -> {Time.now}
+  field :manager, type: Boolean, default: false
   field :encrypted_password, type: String, default: ""
   field :current_password, type: String, default: ""
 
@@ -45,5 +46,8 @@ class User
       errors.add(:nickname, 'can\'t contain more than 12 symbols') if nickname[0].size > 12
     end
   end
+
+  has_many :report_manager, :class_name => 'Report', :inverse_of => :user_manager
+  has_many :report_employee, :class_name => 'Report', :inverse_of => :user_employee
 end
 

@@ -1,0 +1,23 @@
+%h3
+  Hello employee
+%h3
+  Weekly Report
+.col-lg-offset-2
+  .row.new-report-form.col-lg-10
+    %form#create-report-form.form-horizontal{action: "/interview", method: "post", role: "form"}
+      .row
+        %label{:style => "font-size:18px"}
+          QUESTIONS:
+        %label{:style => "float:right"}
+          Your manager: #{@manager.nickname}
+          %br
+          (#{@manager.email})
+      .col-lg-offset-1
+        - @questions.each do |question|
+          .form-group.answers{:id => "#{question.id}"}
+            %label{for: "InputAnswer1"} #{question.text}
+            %input#InputAnswer1.form-control{name: "#{question.id}[0]", placeholder: "Enter answer of question", type: "text"}/
+            %button.more-answer.btn.btn-primary.btn-xs{type: "button"} one more answer
+        %input{name: "manager_id", type: "hidden", value: "#{@manager.id}"}
+        .row
+          %button#create-report-send.btn.btn-success.btn-sm{type: "button"} SUBMIT REPORT

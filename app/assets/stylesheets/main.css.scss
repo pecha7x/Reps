@@ -3,5 +3,25 @@
   margin-top: -43px;
 }
 .container{
-  margin-top: 100px;
+  margin-top: 80px;
+  padding-bottom: 30px;
+}
+#create-report-form{
+    .more-answer{
+      float: right;
+      margin-top: 5px;
+    }
+
+  input{
+    margin-top: 5px;
+  }
+}
+.new-report-form{
+  padding: 30px 50px 30px 30px;
+  border: 2px solid #3493ff;
+  outline: 2px solid #3ec5f2;
+}
+.alert-danger{
+  margin-top: 15px;
+  margin-left: 30px;
 }
