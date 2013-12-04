@@ -73,6 +73,7 @@
     <orderEntry type="library" scope="PROVIDED" name="turbolinks (v1.3.1, RVM: ruby-2.0.0-p247 [rails4.1]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.38, RVM: ruby-2.0.0-p247 [rails4.1]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.3.2, RVM: ruby-2.0.0-p247 [rails4.1]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="underscore-rails (v1.5.2, RVM: ruby-2.0.0-p247 [rails4.1]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.3, RVM: ruby-2.0.0-p247 [rails4.1]) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">

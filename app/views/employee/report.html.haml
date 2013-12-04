@@ -1,0 +1,13 @@
+%h3
+  Weekly Report
+.row
+  #last_report.col-lg-9.col-lg-offset-2
+    %label= @report.created_at.to_s(:my_datetime)
+    = link_to "All Reports", user_reports_path, :class => "col-lg-offset-8 btn btn-primary"
+    - @report.answers.each do |qest_answ|
+      .row
+        %label.col-lg-offset-3= qest_answ.question.text
+        %ul
+          - qest_answ.answers.each do |answer|
+            %li
+              = answer

@@ -1,3 +1,9 @@
+.navbar-nav{
+  .name{
+    padding: 1px 18px !important;
+    margin-top: -3px;
+  }
+}
 #button_sign{
   padding: 1px 18px !important;
   margin-top: -43px;
@@ -16,7 +22,7 @@
     margin-top: 5px;
   }
 }
-.new-report-form{
+.new-report-form, #last_report{
   padding: 30px 50px 30px 30px;
   border: 2px solid #3493ff;
   outline: 2px solid #3ec5f2;
@@ -24,4 +30,50 @@
 .alert-danger{
   margin-top: 15px;
   margin-left: 30px;
+}
+
+#new-report-show{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#my_reports{
+  .report{
+    width: 147px;
+      label{
+         cursor: pointer;
+      }
+  }
+  .report:hover {
+    padding: 4px 3px 0px 6px;
+    border: 2px solid #41d1ff;
+    border-radius: 8px;
+    -moz-border-radius: 8px ;
+    -webkit-border-radius: 8px;
+    cursor: pointer;
+  }
+}
+#reps{
+  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+  min-height: 20%;
+  a {
+    text-decoration: none;
+  }
+  a:link, a:visited {
+    color: black;
+  }
+  a:hover {
+    color: black;
+  }
+}
+#allreports{
+  tr.report:hover {
+    border: 2px solid #41d1ff;
+    outline: 1px solid #3ec5f2;
+    cursor: pointer;
+  }
 }

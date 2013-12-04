@@ -19,4 +19,5 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
     :branch => '3.0.0'
 gem 'devise', github: 'plataformatec/devise'
 gem 'haml-rails', '0.4'
+gem 'underscore-rails'
 

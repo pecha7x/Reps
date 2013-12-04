@@ -1,0 +1,11 @@
+.col-lg-5.col-lg-offset-4#reps
+  .row.col-lg-offset-4#my_reports
+    - if @reports.blank?
+      %label{:style => 'font-size:18px;margin-left: -17px;'}
+        You havent reports
+    - else
+      %label{:style => 'font-size:18px;margin-left: -17px;'}
+        All My Reports:
+      - @reports.each do |report|
+        .row.report{:id => "#{report.id}"}
+          = link_to("#{report.created_at.to_s(:my_datetime)}", user_report_path(report.id))

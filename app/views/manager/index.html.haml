@@ -1,2 +1,44 @@
-%h3
-  Hello manager
+.col-lg-9.col-lg-offset-2#reps
+  .row#my_reports
+    - if @reports.blank?
+      %label.col-lg-offset-4{:style => 'font-size:18px;'}
+        You havent reports
+    - else
+      %label.col-lg-offset-4{:style => 'font-size:18px'}
+        Received Reports :
+      %table.table.table-bordered#allreports
+        %thead
+          %tr
+            %th
+              Date
+            %th.answer
+              Name
+            %th.date
+              Email
+        %tbody
+          - @reports.each do |report|
+            %tr.report{:id => "#{report.id}"}
+              %td
+                = report.created_at.to_s(:my_datetime)
+              %td
+                = report.user_employee.nickname
+              %td
+                = report.user_employee.email
+#userreport
+%script#report-template{type: "text/template"}
+  .row
+    #last_report.col-lg-9.col-lg-offset-2
+      %label
+        {{date}}
+      %label.col-lg-offset-6
+        from {{user}}
+      .row.quest_answ
+
+%script#report-template-quesion{type: "text/template"}
+  %label.col-lg-offset-2
+    {{question}}
+  %ul.answs
+
+%script#report-template-answer{type: "text/template"}
+  %li
+    {{answer}}
