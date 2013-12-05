@@ -15,6 +15,7 @@ class EmployeeController < ApplicationController
       return render :json => { :errors => answer.errors.full_messages } unless answer.save
     end
     return render :json => { :errors => report.errors.full_messages } unless report.save
+    UserMailer.report(report).deliver
     render :json => { :errors => false }
   end
 

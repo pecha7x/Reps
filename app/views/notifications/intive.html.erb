@@ -7,7 +7,7 @@
 <div class="row">
   <label>Hi,</label>
   <br>
-  <label><%= current_user.email%> invites you to WeeklyReps <%= link_to("registrate", :controller => "users", :action => "sign_up", :host => "hidden-island-8670.herokuapp.com/")%> for sending weekly reports</label>
+  <label><%= @user.email%> invites you to WeeklyReps <%= link_to("registrate", :controller => "users", :action => "sign_up", :host => "hidden-island-8670.herokuapp.com/")%> for sending weekly reports</label>
 </div>
 </body>
 </html>
