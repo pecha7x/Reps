@@ -5,9 +5,9 @@ class UserMailer < ActionMailer::Base
     mail to: @user.email, subject: "WeeklyReps", template_path: 'notifications', template_name: 'weekly'
   end
 
-  def intive(user)
+  def intive(user_from, email_to)
     @user = user
-    mail to: @user.email, subject: "WeeklyReps", template_path: 'notifications', template_name: 'intive'
+    mail to: email_to, subject: "WeeklyReps", template_path: 'notifications', template_name: 'intive'
   end
 
   def report(report)

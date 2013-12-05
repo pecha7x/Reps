@@ -20,6 +20,7 @@ class ApplicationController < ActionController::Base
   def set_time_zone
     Time.zone = current_user.time_zone if current_user
   end
+
   #
   #def after_sign_in_path_for(resource)
   #  monitor_path
@@ -30,5 +31,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :nickname, :time_zone) }
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:email, :current_password, :password, :password_confirmation, :nickname, :time_zone) }
   end
+
   protect_from_forgery with: :exception
 end

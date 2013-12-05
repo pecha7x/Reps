@@ -1,5 +1,6 @@
 class MainController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :status_true?
 
   def index
     if current_user.manager
@@ -13,6 +14,15 @@ class MainController < ApplicationController
       @questions = Question.all
       respond_to do |format|
         format.html { render "employee/index" }
+      end
+    end
+  end
+
+  private
+  def status_true?
+    if current_user and !current_user.status
+      respond_to do |format|
+        format.html { render "employee/blocked" }
       end
     end
   end

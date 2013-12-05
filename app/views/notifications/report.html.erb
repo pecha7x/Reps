@@ -8,8 +8,9 @@
   <label>Hello, <%= @report.user_manager.nickname%>.</label>
   <br>
   <label><%= @report.user_employee.nickname%> sent you own weekly report.</label>
-  <h3>Weekly Report</h3>
+  <h3><%= link_to("Weekly Report", root_path, :host => "hidden-island-8670.herokuapp.com")%></h3>
   <label><%= @report.created_at.to_s(:my_datetime)%></label>
+  <br>
   <%- @report.answers.each do |qest_answ|%>
     <%= qest_answ.question.text%>
     <ul>

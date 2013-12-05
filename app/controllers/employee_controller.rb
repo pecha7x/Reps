@@ -1,5 +1,6 @@
 class EmployeeController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :status_true?
 
   def save_report
     report = Report.new(user_manager_id: report_params["manager_id"], user_employee_id: current_user.id)
@@ -38,5 +39,13 @@ class EmployeeController < ApplicationController
   private
   def report_params
     params.permit!
+  end
+
+  def status_true?
+    if current_user and !current_user.status
+      respond_to do |format|
+        format.html { render "employee/blocked" }
+      end
+    end
   end
 end
