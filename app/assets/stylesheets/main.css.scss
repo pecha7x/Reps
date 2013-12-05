@@ -17,7 +17,6 @@
       float: right;
       margin-top: 5px;
     }
-
   input{
     margin-top: 5px;
   }
@@ -27,16 +26,14 @@
   border: 2px solid #3493ff;
   outline: 2px solid #3ec5f2;
 }
-.alert-danger{
+.alert{
   margin-top: 15px;
   margin-left: 30px;
 }
-
 #new-report-show{
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
 #my_reports{
   .report{
     width: 147px;
@@ -78,5 +75,34 @@
   }
   th.date{
     width: 17.5%
+  }
+}
+#employees-list{
+  th, tr{
+    background-color: beige;
+    text-align: center;
+    .change-status{
+      cursor: pointer;
+      height: 28px;
+    }
+    .mood{
+      height: 28px;
+    }
+    .mood_th{
+      width: 7%;
+    }
+    .status{
+      width: 7%;
+    }
+    .day{
+      width: 17.5%;
+    }
+    select{
+      background-color: #DBD9D9;
+      font-size: 16px;
+    }
+  }
+  th{
+    background-color: #ECECEC !important;
   }
 }

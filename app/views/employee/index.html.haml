@@ -1,17 +1,18 @@
 %h3
   Weekly Report
 .row
-  #last_report.col-lg-9.col-lg-offset-2
-    %label{:style => "font-size:18px;float:right"}
-      Last report
-    %label= @report.created_at.to_s(:my_datetime)
-    - @report.answers.each do |qest_answ|
-      .row
-        %label.col-lg-offset-3= qest_answ.question.text
-        %ul
-          - qest_answ.answers.each do |answer|
-            %li
-              = answer
+  - unless @report.blank?
+    #last_report.col-lg-9.col-lg-offset-2
+      %label{:style => "font-size:18px;float:right"}
+        Last report
+      %label= @report.created_at.to_s(:my_datetime)
+      - @report.answers.each do |qest_answ|
+        .row
+          %label.col-lg-offset-3= qest_answ.question.text
+          %ul
+            - qest_answ.answers.each do |answer|
+              %li
+                = answer
 %input#new-report-show.col-lg-offset-6.btn.btn-success.btn-lg{type: "button", value: "NEW REPORT"}
 .row#new_report{:style => "display:none"}
   .col-lg-offset-2
@@ -30,6 +31,16 @@
               %label{for: "InputAnswer1"} #{question.text}
               %input#InputAnswer1.form-control{name: "#{question.id}[0]", placeholder: "Enter answer of question", type: "text"}/
               %button.more-answer.btn.btn-primary.btn-xs{type: "button"} one more answer
+          .form-group
+            %label{for: "mood"} How would you rate your current mood?
+            .col-lg-2.col-lg-offset-3
+              %select.form-control#mood{:name => "mood"}
+                %option{:selected=>"selected"}
+                  Super
+                %option{:name => "mood"}
+                  Good
+                %option{:name => "mood"}
+                  Bad
           %input{name: "manager_id", type: "hidden", value: "#{@manager.id}"}
-          .row
+          .row.col-lg-3
             %button#create-report-send.btn.btn-success.btn-sm{type: "button"} SUBMIT REPORT

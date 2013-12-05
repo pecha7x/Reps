@@ -5,23 +5,24 @@
     <ignored path="Reps.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Gemfile" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386139816758" ignored="false" />
-    <file path="/index.html.haml" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386193422184" ignored="false" />
-    <file path="/routes.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386194837789" ignored="false" />
+    <file path="/index.html.haml" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386242540811" ignored="false" />
+    <file path="/routes.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386246961109" ignored="false" />
     <file path="/application.html.haml" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386178515666" ignored="false" />
     <file path="/seeds.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386162751741" ignored="false" />
     <file path="/production.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386142961994" ignored="false" />
-    <file path="/user.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386162921319" ignored="false" />
+    <file path="/user.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386243308426" ignored="false" />
     <file path="/main_controller.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386173930662" ignored="false" />
-    <file path="/main.css.scss" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386194720963" ignored="false" />
-    <file path="/main.coffee" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386194047807" ignored="false" />
+    <file path="/main.css.scss" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386237622420" ignored="false" />
+    <file path="/main.coffee" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386248393230" ignored="false" />
     <file path="/report.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386164913701" ignored="false" />
     <file path="/question.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386165025182" ignored="false" />
     <file path="/answer.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386165626518" ignored="false" />
-    <file path="/employee_controller.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386184357192" ignored="false" />
+    <file path="/employee_controller.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386243183473" ignored="false" />
     <file path="/reports.html.haml" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386184269025" ignored="false" />
     <file path="/environment.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386181061801" ignored="false" />
     <file path="/report.html.haml" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386184860933" ignored="false" />
-    <file path="/manager_controller.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386194956945" ignored="false" />
+    <file path="/manager_controller.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386247805639" ignored="false" />
+    <file path="/employees.html.haml" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386244411726" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,19 +42,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/manager/index.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="15" selection-start="383" selection-end="383" vertical-scroll-proportion="0.32554257">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="manager_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/manager_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="43" selection-start="620" selection-end="629" vertical-scroll-proportion="0.0">
+            <state line="34" column="60" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -62,7 +54,16 @@
       <file leaf-file-name="employees.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/manager/employees.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="28" column="81" selection-start="893" selection-end="896" vertical-scroll-proportion="-8.458333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="140" column="46" selection-start="4981" selection-end="4981" vertical-scroll-proportion="0.38566554">
               <folding />
             </state>
           </provider>
@@ -71,45 +72,16 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="75" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
+            <state line="10" column="69" selection-start="542" selection-end="555" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.coffee">
+      <file leaf-file-name="main.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="94" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_my.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../med-app/app/assets/javascripts/main_my.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="31" selection-start="439" selection-end="450" vertical-scroll-proportion="3.0">
-              <folding>
-                <marker date="1386106060613" expanded="false" signature="9553:9596" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="report.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/employee/report.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="4" selection-start="69" selection-end="69" vertical-scroll-proportion="-2.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="70" selection-start="695" selection-end="695" vertical-scroll-proportion="-10.625">
+            <state line="18" column="5" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,22 +97,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/report.rb" />
-        <option value="$PROJECT_DIR$/../med-app/app/assets/stylesheets/main.css.scss" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/app/views/employee/reports.html.haml" />
-        <option value="$PROJECT_DIR$/app/controllers/employee_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/employee/index.html.haml" />
         <option value="$PROJECT_DIR$/app/views/employee/report.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/main.coffee" />
         <option value="$PROJECT_DIR$/app/views/manager/index.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/employee/index.html.haml" />
+        <option value="$PROJECT_DIR$/app/controllers/employee_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/manager/employees.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/manager_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/main.coffee" />
       </list>
     </option>
   </component>
@@ -152,7 +124,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
+    <option name="x" value="1984" />
     <option name="y" value="-4" />
     <option name="width" value="1217" />
     <option name="height" value="805" />
@@ -183,8 +155,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -447,6 +417,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -454,7 +426,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../med-app/app/assets/javascripts/main_my.js.erb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BlindDateNew/app/assets/javascripts/messages.js.coffee" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
@@ -759,18 +731,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1217" height="805" extended-state="6" />
-    <editor active="true" />
+    <frame x="1984" y="-4" width="1217" height="805" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28240344" sideWeight="0.49556214" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23862661" sideWeight="0.49556214" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50443786" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.50443786" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -843,116 +815,100 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/employee/index.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="49" selection-start="146" selection-end="183" vertical-scroll-proportion="-3.75">
-          <folding />
-        </state>
+        <state line="17" column="70" selection-start="695" selection-end="695" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../med-app/app/assets/javascripts/main_my.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="31" selection-start="439" selection-end="450" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/manager/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="89" selection-start="327" selection-end="327" vertical-scroll-proportion="0.24077046" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/report.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="368" selection-end="381" vertical-scroll-proportion="0.41489363">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/answer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/question.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Astral/app/assets/javascripts/shop.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="10" selection-start="2596" selection-end="2615" vertical-scroll-proportion="-3.4495797">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employee/reports.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="23" selection-start="374" selection-end="410" vertical-scroll-proportion="0.5319149">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="16" selection-start="1269" selection-end="1269" vertical-scroll-proportion="1.2407705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="75" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="94" selection-start="437" selection-end="437" vertical-scroll-proportion="0.28892455" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/employee/report.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4" selection-start="69" selection-end="69" vertical-scroll-proportion="-2.5">
+        <state line="4" column="4" selection-start="69" selection-end="69" vertical-scroll-proportion="0.10016695" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employee/reports.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="12" selection-start="69" selection-end="188" vertical-scroll-proportion="0.12520868" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="5" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+    <entry file="file://$PROJECT_DIR$/../BlindDateNew/app/assets/javascripts/messages.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="70" selection-start="695" selection-end="695" vertical-scroll-proportion="-10.625">
+        <state line="44" column="23" selection-start="997" selection-end="1013" vertical-scroll-proportion="0.3091537" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employee/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="23" selection-start="1605" selection-end="1610" vertical-scroll-proportion="0.74232084">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="82" selection-start="544" selection-end="544" vertical-scroll-proportion="0.28892455">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/employee_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="5" selection-start="852" selection-end="930" vertical-scroll-proportion="0.505618">
+        <state line="17" column="43" selection-start="672" selection-end="797" vertical-scroll-proportion="0.4093098">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="69" selection-start="542" selection-end="555" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/manager/employees.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="28" column="81" selection-start="893" selection-end="896" vertical-scroll-proportion="-8.458333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="22" selection-start="690" selection-end="703" vertical-scroll-proportion="0.4858156">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/manager_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="43" selection-start="620" selection-end="629" vertical-scroll-proportion="0.0">
+        <state line="34" column="60" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../med-app/app/assets/javascripts/main_my.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="439" selection-end="450" vertical-scroll-proportion="3.0">
-          <folding>
-            <marker date="1386106060613" expanded="false" signature="9553:9596" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="94" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/manager/index.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="15" selection-start="383" selection-end="383" vertical-scroll-proportion="0.32554257">
+        <state line="140" column="46" selection-start="4981" selection-end="4981" vertical-scroll-proportion="0.38566554">
           <folding />
         </state>
       </provider>

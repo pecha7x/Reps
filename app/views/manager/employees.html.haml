@@ -1,44 +1,51 @@
 .col-lg-9.col-lg-offset-2#reps
-  .row#my_reports
-    - if @reports.blank?
+  .row#employyes
+    - if @users.blank?
       %label.col-lg-offset-4{:style => 'font-size:18px;'}
-        You havent reports
+        You havent employees that send you their reports
     - else
       %label.col-lg-offset-4{:style => 'font-size:18px'}
-        Received Reports :
-      %table.table.table-bordered#allreports
+        Your Employees :
+      %table.table.table-bordered#employees-list
         %thead
           %tr
-            %th.date
-              Date
-            %th
+            %th.status
+              Status
+            %th.name
               Name
             %th
               Email
+            %th.day
+              Day of report
+            %th.mood_th
+              Mood
         %tbody
-          - @reports.each do |report|
-            %tr.report{:id => "#{report.id}"}
+          - @users.each do |user|
+            %tr.user{:id => "#{user.id}"}
               %td
-                = report.created_at.to_s(:my_datetime)
+                - if user.status
+                  = image_tag("On.png", :class => 'change-status', :name => 'ON')
+                - else
+                  = image_tag("Off.png", :class => 'change-status', :name => 'OFF')
               %td
-                = report.user_employee.nickname
+                %label
+                  = user.nickname
               %td
-                = report.user_employee.email
-#userreport
-%script#report-template{type: "text/template"}
-  .row
-    #last_report.col-lg-9.col-lg-offset-2
-      %label
-        {{date}}
-      %label.col-lg-offset-6
-        from {{user}}
-      .row.quest_answ
-
-%script#report-template-quesion{type: "text/template"}
-  %label.col-lg-offset-2
-    {{question}}
-  %ul.answs
-
-%script#report-template-answer{type: "text/template"}
-  %li
-    {{answer}}
+                %label
+                  = user.email
+              %td
+                %select.form-control.day_of_report
+                  - Date::DAYNAMES[0..7].each do |day|
+                    - if day == Date::DAYNAMES[user.day_of_report]
+                      %option{:selected=>"selected"}
+                        = day
+                    - else
+                      %option
+                        = day
+              %td
+                - if user.mood == "Super"
+                  = image_tag("mood_cool.png", :class => 'mood')
+                - elsif user.mood == "Good"
+                  = image_tag("mood_good.png", :class => 'mood')
+                - else
+                  = image_tag("mood_bad.png", :class => 'mood')

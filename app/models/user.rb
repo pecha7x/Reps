@@ -17,6 +17,10 @@ class User
   field :time_zone, type: String, default: "UTC"
   field :notification_time,  type: Time, default: -> {Time.now}
   field :manager, type: Boolean, default: false
+  field :status, type: Boolean, default: true
+  field :day_of_report, type: Integer, default: 5
+  #Time.now.in_time_zone.wday
+  field :mood, type: String, default: "Good"
   field :encrypted_password, type: String, default: ""
   field :current_password, type: String, default: ""
 

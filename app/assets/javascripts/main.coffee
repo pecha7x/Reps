@@ -5,6 +5,8 @@ report =
     @saveReport()
     @newReportShow()
     @showUserReport()
+    @changeDayOfReport()
+    @changeStatusEmployee()
 
   secondAnswer: ->
     $(".more-answer").on "click", ->
@@ -18,12 +20,15 @@ report =
       $(".alert").remove()
       answ = {}
       manager_id = ""
-      params = $("#create-report-form").find("input").serializeArray()
+      mood = ""
+      params = $("#create-report-form").find("input, select").serializeArray()
       $.each params, (i, e) ->
-        if e.value and e.name != "manager_id"
+        if e.value and e.name != "manager_id" and e.name != "mood"
           answ[e.name] = e.value
         else if e.name is "manager_id"
           manager_id = e.value
+        else if e.name is "mood"
+          mood = e.value
 
       if $.isEmptyObject(answ)
         $("#create-report-form").append "<div class='alert alert-danger'>Please check your answers</div>"
@@ -34,7 +39,8 @@ report =
           url: "/save_report.json"
           data: {
             answ,
-            manager_id
+            manager_id,
+            mood
           }
           dataType: "json"
         ).done (data) ->
@@ -42,9 +48,9 @@ report =
           if data.errors
             $(".container").prepend "<div class='alert alert-danger'>Please check your answers</div>"
           else
-            $("#new-report-show").hide()
             $("#new_report").hide()
-            $("#last_report").append "<div class='alert alert-success'>Report sent to your manager</div>"
+            $("#new-report-show").after "<div class='alert alert-success'>Report was sended to your manager</div>"
+            $("#new-report-show").hide()
             setTimeout "window.location.reload();", 3000
 
   newReportShow: ->
@@ -52,9 +58,11 @@ report =
       if $("#new_report").is(":visible")
         $("#new_report").hide()
         $(this).val "NEW REPORT"
+        $("html, body").animate({ scrollTop: 0 }, 1000);
       else
         $("#new_report").show()
         $(this).val "CANCEL"
+        $("html, body").animate({ scrollTop: $(document).height() }, 1000);
 
   showUserReport: ->
     $("tr.report").on "click", ->
@@ -64,7 +72,6 @@ report =
       $("#userreport").empty()
       id_report = $(this).attr('id')
       listOfReports = []
-      #NEED BLOCK CLICK EVENT LATER!
       $.ajax(
         type: "post"
         url: "/get_report.json"
@@ -87,7 +94,61 @@ report =
           _.each answers, (answer) ->
             answ = _.template( $("#report-template-answer").html(), {answer: answer})
             q = $("#userreport").find(".answs").last()
-            console.log q
             $(answ).appendTo($(q))
+
+  changeDayOfReport: ->
+    $('.day_of_report').on "click", ->
+      user_id = $(this).parent().parent().attr('id')
+      optionSelected = $("option:selected", this);
+      day = this.value;
+
+      $.ajax(
+        type: "post"
+        url: "/change_employee.json"
+        data: {
+          user_id,
+          day
+        }
+        dataType: "json"
+      ).done (data) ->
+        $(".alert").remove()
+        if data.errors
+          $(".container").prepend "<div class='alert alert-danger'>Not stored. It's happens..</div>"
+        else
+          $(".container").prepend "<div class='alert alert-success'>Day of report was changed</div>"
+          setTimeout "$('.alert').hide();", 3000
+
+  changeStatusEmployee: ->
+    $('.change-status').on "click", ->
+      status = $(this)
+      user_id = $(this).parent().parent().attr('id')
+      status_id = status.attr('name')
+
+      $.ajax(
+        type: "post"
+        url: "/change_employee_status.json"
+        data: {
+          user_id,
+          status_id
+        }
+        dataType: "json"
+      ).done (data) ->
+        $(".alert").remove()
+        if data.errors
+          $(".container").prepend "<div class='alert alert-danger'>Not stored. It's happens..</div>"
+        else
+          $(".container").prepend "<div class='alert alert-success'>User status was changed</div>"
+          setTimeout "$('.alert').hide();", 1000
+          console.log status
+          if status_id == "ON"
+            src = status.attr("src").replace("/assets/On.png", "/assets/Off.png");
+            name = status.attr("name").replace("ON", "OFF");
+          else
+            src = status.attr("src").replace("/assets/Off.png", "/assets/On.png");
+            name = status.attr("name").replace("OFF", "ON");
+
+          status.attr("name", name);
+          status.attr("src", src);
+
 $ ->
   report.init()

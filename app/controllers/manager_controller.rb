@@ -15,11 +15,26 @@ class ManagerController < ApplicationController
   end
 
   def list_employees
-    @users = User.nin(current_user.id).order_by(created_at: :desc)
+    @users = User.nin(id: current_user.id).order_by(created_at: :desc)
 
     respond_to do |format|
       format.html { render "manager/employees" }
     end
+  end
+
+  def change_day_of_report
+    user = User.find_by(id: params['user_id'])
+    day = Date::DAYNAMES.index(params['day'])
+    user.day_of_report = day
+    return render :json => { :errors => true } unless user.save
+    render :json => { :errors => false }
+  end
+
+  def change_status
+    user = User.find_by(id: params['user_id'])
+    user.status = params['status_id'] == "ON" ? false : true
+    return render :json => { :errors => true } unless user.save
+    render :json => { :errors => false }
   end
 
   private

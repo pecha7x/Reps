@@ -3,6 +3,8 @@ class EmployeeController < ApplicationController
 
   def save_report
     report = Report.new(user_manager_id: report_params["manager_id"], user_employee_id: current_user.id)
+    current_user.mood = report_params["mood"]
+    current_user.save
     #return render :json => { :errors => report.errors.full_messages } if report.save
     report_params["answ"].each do |answers|
       answer = Answer.new(question_id: answers[0])
