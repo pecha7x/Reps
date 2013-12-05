@@ -24,7 +24,7 @@
     <file path="/manager_controller.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386269324168" ignored="false" />
     <file path="/employees.html.haml" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386263647960" ignored="false" />
     <file path="/user_mailer.rb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386269713716" ignored="false" />
-    <file path="/intive.html.erb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386269392799" ignored="false" />
+    <file path="/intive.html.erb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386271736740" ignored="false" />
     <file path="/intive.text.erb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386268247982" ignored="false" />
     <file path="/report.html.erb" changelist="11368c05-bf38-4ad2-9525-941b44ee1e35" time="1386270410853" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,6 +46,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="manager_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/manager_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="40" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="user_mailer.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,10 +73,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="intive.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/notifications/intive.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="149" selection-start="312" selection-end="312" vertical-scroll-proportion="-5.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="report.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/notifications/report.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="16" selection-start="521" selection-end="521" vertical-scroll-proportion="0.38523275">
+            <state line="18" column="61" selection-start="558" selection-end="558" vertical-scroll-proportion="1.042471">
               <folding />
             </state>
           </provider>
@@ -95,10 +113,10 @@
         <option value="$PROJECT_DIR$/app/views/notifications/intive.text.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss" />
         <option value="$PROJECT_DIR$/app/controllers/manager_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/notifications/intive.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/employee_controller.rb" />
         <option value="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
         <option value="$PROJECT_DIR$/app/views/notifications/report.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/notifications/intive.html.erb" />
       </list>
     </option>
   </component>
@@ -667,7 +685,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5029586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5029586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -809,23 +827,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/manager_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/employee/report.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="40" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/notifications/intive.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="41" selection-start="0" selection-end="393" vertical-scroll-proportion="-7.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/employee_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="27" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
+        <state line="3" column="9" selection-start="0" selection-end="413" vertical-scroll-proportion="0.072231136">
           <folding />
         </state>
       </provider>
@@ -837,16 +841,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employee/report.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/controllers/manager_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="9" selection-start="0" selection-end="413" vertical-scroll-proportion="0.072231136">
+        <state line="43" column="40" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/employee_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="27" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/notifications/intive.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="149" selection-start="312" selection-end="312" vertical-scroll-proportion="-5.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/notifications/report.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="521" selection-end="521" vertical-scroll-proportion="0.38523275">
+        <state line="18" column="61" selection-start="558" selection-end="558" vertical-scroll-proportion="1.042471">
           <folding />
         </state>
       </provider>
