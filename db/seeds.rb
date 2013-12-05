@@ -1,11 +1,11 @@
 #rake db:mongoid:purge
 manager = User.create({
-                             email: 'artempecherin@gmail.com',
+                             email: 'js22908@gmail.com',
                              password: '12345678',
                              password_confirmation: '12345678',
-                             nickname: 'Artem Pecherin',
+                             nickname: 'Jon Smith',
                              manager: true,
-                             time_zone: 'Moscow'
+                             time_zone: 'London'
                          });
 
 employee = User.create({
