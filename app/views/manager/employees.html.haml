@@ -1,3 +1,9 @@
+.col-lg-6.col-lg-offset-3
+  .row.col-lg-offset-1
+    %label Add employee:
+    %input#add-employee{type: "text", :placeholder => "example@example.com"}/
+  %button#add-employee-submit.col-lg-offset-3.btn.btn-primary{type: "button"} ADD
+  #result
 .col-lg-9.col-lg-offset-2#reps
   .row#employyes
     - if @users.blank?
@@ -24,9 +30,9 @@
             %tr.user{:id => "#{user.id}"}
               %td
                 - if user.status
-                  = image_tag("On.png", :class => 'change-status', :name => 'ON')
+                  .change-status.status-on#ON
                 - else
-                  = image_tag("Off.png", :class => 'change-status', :name => 'OFF')
+                  .change-status.status-off#OFF
               %td
                 %label
                   = user.nickname

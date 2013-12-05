@@ -7,6 +7,7 @@ report =
     @showUserReport()
     @changeDayOfReport()
     @changeStatusEmployee()
+    @addEmployeeSubmit()
 
   secondAnswer: ->
     $(".more-answer").on "click", ->
@@ -113,16 +114,16 @@ report =
       ).done (data) ->
         $(".alert").remove()
         if data.errors
-          $(".container").prepend "<div class='alert alert-danger'>Not stored. It's happens..</div>"
+          $("#result").prepend "<div class='alert alert-danger'>Not stored. It's happens..</div>"
         else
-          $(".container").prepend "<div class='alert alert-success'>Day of report was changed</div>"
+          $("#result").prepend "<div class='alert alert-success'>Day of report was changed</div>"
           setTimeout "$('.alert').hide();", 3000
 
   changeStatusEmployee: ->
     $('.change-status').on "click", ->
       status = $(this)
       user_id = $(this).parent().parent().attr('id')
-      status_id = status.attr('name')
+      status_id = status.attr('id')
 
       $.ajax(
         type: "post"
@@ -135,20 +136,35 @@ report =
       ).done (data) ->
         $(".alert").remove()
         if data.errors
-          $(".container").prepend "<div class='alert alert-danger'>Not stored. It's happens..</div>"
+          $("#result").after "<div class='alert alert-danger'>Not stored. It's happens..</div>"
         else
-          $(".container").prepend "<div class='alert alert-success'>User status was changed</div>"
+          $("#result").after "<div class='alert alert-success'>User status was changed</div>"
           setTimeout "$('.alert').hide();", 1000
-          console.log status
           if status_id == "ON"
-            src = status.attr("src").replace("/assets/On.png", "/assets/Off.png");
-            name = status.attr("name").replace("ON", "OFF");
+            status.removeClass('status-on').addClass('status-off')
+            status.attr("id","OFF")
           else
-            src = status.attr("src").replace("/assets/Off.png", "/assets/On.png");
-            name = status.attr("name").replace("OFF", "ON");
+            status.removeClass('status-off').addClass('status-on')
+            status.attr("id","ON")
 
-          status.attr("name", name);
-          status.attr("src", src);
-
+  addEmployeeSubmit: ->
+    $('#add-employee-submit').on "click", ->
+      email = $('#add-employee').val()
+      if $.isEmptyObject(email)
+        return $("#result").after "<div class='alert alert-danger'>Please check your answers</div>"
+      $.ajax(
+        type: "post"
+        url: "/invite_user.json"
+        data: {
+          email
+        }
+        dataType: "json"
+      ).done (data) ->
+        $(".alert").remove()
+        if data.errors
+          $("#result").after "<div class='alert alert-danger'>This user already exists in the team</div>"
+        else
+          $("#result").after "<div class='alert alert-success'>The user " + email + " was invited</div>"
+          setTimeout "$('.alert').hide();", 4000
 $ ->
   report.init()

@@ -37,6 +37,13 @@ class ManagerController < ApplicationController
     render :json => { :errors => false }
   end
 
+  def invite_user
+    return render :json => { :errors => true } if (params['email'] =~ /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/).nil?
+    return render :json => { :errors => true } if User.where(email: params['email'])
+    UserMailer.intive(params['email']).deliver
+    render :json => { :errors => false }
+  end
+
   private
   def report_params
     params.permit!

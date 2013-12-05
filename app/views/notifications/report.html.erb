@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<div class="row">
+  <label>Hi <%= @user.nickname%>,</label>
+  <br>
+  <label>You report having:</label>
+  <%- @user.user_symptoms.where(monitoring: :true).each do |symptom|%>
+      <label>"<%= symptom.name%>".</label>
+      <br>
+  <%end%>
+  <p>click one out of these icons / links:</p>
+  <%- @user.user_questions.where(monitoring: :true).each do |quest|%>
+    <br>
+    <p><%= quest.question%></p>
+    <%- quest.user_answers.each do |answ|%>
+      <%= link_to("#{answ.answer}", :controller => "interview",
+                  :action => "index", :host => "floating-lake-3111.herokuapp.com")%>
+      <br>
+    <%end%>
+  <%end%>
+</div>
+</body>
+</html>

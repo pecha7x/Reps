@@ -9,7 +9,11 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :email, presence: true, uniqueness: true
+  #validates :email, presence: true, uniqueness: true,
+  #          length: {minimum: 3, maximum: 254},
+  #          uniqueness: true,
+  #          format: {with: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
+
   validate :nickname_validations, presence: true
 
   field :email, type: String, default: ""
@@ -49,6 +53,10 @@ class User
     elsif nickname.size == 1
       errors.add(:nickname, 'can\'t contain more than 12 symbols') if nickname[0].size > 12
     end
+  end
+
+  def self.answers
+    ["A lot", "normal", "a little", "not at all"]
   end
 
   has_many :report_manager, :class_name => 'Report', :inverse_of => :user_manager
