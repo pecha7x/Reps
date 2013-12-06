@@ -15,7 +15,7 @@ class User
   field :email, type: String, default: ""
   field :nickname, type: String, default: ""
   field :time_zone, type: String, default: "UTC"
-  field :notification_time,  type: Time, default: -> {Time.now}
+  field :notification_time,  type: Time, default: -> {Time.now - 1.day}
   field :manager, type: Boolean, default: false
   field :status, type: Boolean, default: true
   field :day_of_report, type: Integer, default: 5

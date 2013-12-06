@@ -8,7 +8,7 @@ namespace :reps_job do
       if user.status and user.day_of_report == Time.now.wday and !user.manager and user.notification_time < (Time.now.in_time_zone - 1.day)
         user.notification_time =  Time.now
         user.save
-        UserMailer.daily(user).deliver
+        UserMailer.weekly(user).deliver
       end
     end
   end
