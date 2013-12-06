@@ -32,13 +32,12 @@ class ManagerController < ApplicationController
 
   def change_status
     user = User.find_by(id: params['user_id'])
-    user.status = params['status_id'] == "ON" ? false : true
+    user.status = params['status_id']!= "ON"
     return render :json => { :errors => true } unless user.save
     render :json => { :errors => false }
   end
 
   def invite_user
-    return render :json => { :errors => true } if (params['email'] =~ /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/).nil?
     return render :json => { :errors => true } if User.find_by(email: params['email'])
     UserMailer.intive(current_user, params['email']).deliver
     render :json => { :errors => false }

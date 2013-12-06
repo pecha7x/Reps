@@ -10,7 +10,7 @@ class MainController < ApplicationController
       end
     else
       @manager = User.where(manager: true).first
-      @report = Report.where(user_employee_id: current_user.id).order_by(created_at: :desc).first
+      @report = Report.user_reports(current_user.id).first
       @questions = Question.all
       respond_to do |format|
         format.html { render "employee/index" }

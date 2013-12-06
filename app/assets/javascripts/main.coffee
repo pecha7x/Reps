@@ -150,8 +150,11 @@ report =
   addEmployeeSubmit: ->
     $('#add-employee-submit').on "click", ->
       email = $('#add-employee').val()
-      if $.isEmptyObject(email)
-        return $("#result").after "<div class='alert alert-danger'>Please check your answers</div>"
+      #validate email
+      re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/igm
+      if !re.test(email)
+        $(".alert").remove()
+        return $("#result").after "<div class='alert alert-danger'>Please enter a valid address</div>"
       $.ajax(
         type: "post"
         url: "/invite_user.json"

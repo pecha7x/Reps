@@ -6,7 +6,6 @@ class EmployeeController < ApplicationController
     report = Report.new(user_manager_id: report_params["manager_id"], user_employee_id: current_user.id)
     current_user.mood = report_params["mood"]
     current_user.save
-    #return render :json => { :errors => report.errors.full_messages } if report.save
     report_params["answ"].each do |answers|
       answer = Answer.new(question_id: answers[0])
       answers[1].each do |answ|
@@ -21,7 +20,7 @@ class EmployeeController < ApplicationController
   end
 
   def user_reports
-    @reports = Report.where(user_employee_id: current_user.id).order_by(created_at: :desc)
+    @reports = Report.user_reports(current_user.id)
 
     respond_to do |format|
       format.html { render "employee/reports" }

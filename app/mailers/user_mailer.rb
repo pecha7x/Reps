@@ -6,7 +6,7 @@ class UserMailer < ActionMailer::Base
   end
 
   def intive(user_from, email_to)
-    @user = user
+    @user = user_from
     mail to: email_to, subject: "WeeklyReps", template_path: 'notifications', template_name: 'intive'
   end
 
