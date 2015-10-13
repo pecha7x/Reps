@@ -1,0 +1,19 @@
+foo:
+  report: foo
+  question: foo
+
+foo_1:
+  report: foo
+  question: foo
+
+bar:
+  report: foo
+  question: bar
+
+baz:
+  report: foo
+  question: baz
+
+qux:
+  report: foo
+  question: qux

@@ -1,16 +1,16 @@
 class MainController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :status_true?
+  before_filter :user_blocked?
 
   def index
     if current_user.manager
-      @reports = Report.where(user_manager_id: current_user.id).order_by(created_at: :desc)
+      @reports = Report.reports_to_manager(current_user.id)
       respond_to do |format|
         format.html { render "manager/index" }
       end
     else
       @manager = User.where(manager: true).first
-      @report = Report.user_reports(current_user.id).first
+      @report = Report.reports_from_employee(current_user.id).first
       @questions = Question.all
       respond_to do |format|
         format.html { render "employee/index" }
@@ -19,7 +19,7 @@ class MainController < ApplicationController
   end
 
   private
-  def status_true?
+  def user_blocked?
     if current_user and !current_user.status
       respond_to do |format|
         format.html { render "employee/blocked" }

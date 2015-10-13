@@ -1,0 +1,27 @@
+foo_manager:
+  email: foo@bar.com
+  nickname: Foo Fs1
+  encrypted_password: <%= User.new.send(:password_digest, '1qaz!QAZ') %>
+  confirmed_at: <%= Time.now %>
+  manager: true
+
+bar:
+  email: bar@bar.com
+  nickname: Bar Fs1
+  encrypted_password: <%= User.new.send(:password_digest, '1qaz!QAZ') %>
+  confirmed_at: <%= Time.now %>
+  manager: false
+
+baz:
+  email: baz@bar.com
+  nickname: Baz Fs1
+  encrypted_password: <%= User.new.send(:password_digest, '1qaz!QAZ') %>
+  confirmed_at: <%= Time.now %>
+  manager: false
+
+qux:
+  email: qux@bar.com
+  nickname: Qux Fs1
+  encrypted_password: <%= User.new.send(:password_digest, '1qaz!QAZ') %>
+  confirmed_at: <%= Time.now %>
+  manager: false

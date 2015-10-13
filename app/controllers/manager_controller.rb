@@ -39,7 +39,7 @@ class ManagerController < ApplicationController
 
   def invite_user
     return render :json => { :errors => true } if User.find_by(email: params['email'])
-    UserMailer.intive(current_user, params['email']).deliver
+    UserMailer.invite(current_user, params['email']).deliver
     render :json => { :errors => false }
   end
 

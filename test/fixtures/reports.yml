@@ -1,0 +1,3 @@
+foo:
+  user_manager: foo_manager
+  user_employee: bar

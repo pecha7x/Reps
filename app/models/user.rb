@@ -1,11 +1,5 @@
-class User
-  include Mongoid::Document
+class User < BaseModel
   include Mongoid::Timestamps
-  def as_json(options={})
-    attrs = super(options)
-    attrs["id"] = attrs["_id"]
-    attrs
-  end
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 

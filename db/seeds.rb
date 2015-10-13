@@ -9,10 +9,10 @@ manager = User.create({
                          });
 
 employee = User.create({
-                             email: 'artempecherin1@gmail.com',
+                             email: 'artemp343d31@gmail.com',
                              password: '12345678',
                              password_confirmation: '12345678',
-                             nickname: 'Zahar Pecherin',
+                             nickname: 'Zahar Cherekin',
                              manager: false,
                              time_zone: 'Moscow'
                          });

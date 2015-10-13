@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.2.1'
 gem 'rails', '4.0.0'
 gem 'activeresource'
 gem 'sass-rails', '~> 4.0.0'
@@ -21,3 +21,9 @@ gem 'devise', github: 'plataformatec/devise'
 gem 'haml-rails', '0.4'
 gem 'underscore-rails'
 
+group :test do
+  gem 'minitest-spec-rails'
+  gem 'minitest-reporters'
+  gem 'timecop'
+  gem 'simple_mock'
+end

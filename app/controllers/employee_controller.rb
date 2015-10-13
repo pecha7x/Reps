@@ -20,7 +20,7 @@ class EmployeeController < ApplicationController
   end
 
   def user_reports
-    @reports = Report.user_reports(current_user.id)
+    @reports = Report.reports_from_employee(current_user.id)
 
     respond_to do |format|
       format.html { render "employee/reports" }

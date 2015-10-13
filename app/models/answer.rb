@@ -1,11 +1,4 @@
-class Answer
-  include Mongoid::Document
-  def as_json(options={})
-    attrs = super(options)
-    attrs["id"] = attrs["_id"]
-    attrs
-  end
-
+class Answer < BaseModel
   field :answers, type: Array, default: [];
 
   belongs_to :report
